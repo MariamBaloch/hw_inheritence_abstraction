@@ -18,6 +18,6 @@ public class Student extends Person implements IStudentRole {
 
     @Override
     public String toString() {
-        return "Student " + this.getFirstName() + " " + this.getLastName() + "Salary rate is " + currentGrade;
+        return "Student " + this.firstName + " " + this.lastName + " Current grade is " + currentGrade;
     }
 }

@@ -2,19 +2,22 @@ package com.ga.ex1;
 
 public class Teacher extends fullTimeInstructor implements ITeacherRole {
 
-    private double salaryRate;
-
     public Teacher(String firstName, String lastName) {
         super(firstName, lastName);
     }
 
+    public Teacher(String firstName, String lastName, double salaryRate) {
+        super(firstName, lastName);
+        this.salaryRate = salaryRate;
+    }
+
     @Override
     public void Teach(String subject) {
-        System.out.println("Teacher " + this.getFirstName() + " " + this.getLastName() + " is teaching " + subject);
+        System.out.println(this.firstName + " " + this.lastName + " is teaching " + subject);
     }
 
     @Override
     public String toString() {
-        return "Teacher " + this.getFirstName() + " " + this.getLastName() + "Salary rate is " + salaryRate;
+        return "Teacher: " + firstName + " " + lastName + " Salary rate: $" + salaryRate;
     }
 }
